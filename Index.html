@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Primer Mes</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fff5e6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #ff6600;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.2em;
+            max-width: 600px;
+            line-height: 1.6;
+            margin: 0 20px;
+            text-align: justify;
+        }
+        .heart {
+            color: #ff6600;
+            font-size: 4em;
+            margin: 20px 0;
+        }
+        .message {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+        .login-container {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .login-container input[type="password"] {
+            padding: 10px;
+            font-size: 1.2em;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 200px;
+        }
+        .login-container button {
+            padding: 10px 20px;
+            font-size: 1.2em;
+            background-color: #ff6600;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .login-container button:hover {
+            background-color: #e65c00;
+        }
+    </style>
+    <script>
+        function login() {
+            const password = document.getElementById("password").value;
+            if (password === "23/07/2024") {
+                document.querySelector(".login-container").style.display = "none";
+                document.querySelector(".message").style.display = "flex";
+                const audio = document.getElementById("background-music");
+                audio.play().catch(error => {
+                    console.error("Reproducción bloqueada por el navegador:", error);
+                });
+            } else {
+                alert("Contraseña incorrecta. Intenta de nuevo.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="login-container">
+        <h1>¡Bienvenido!</h1>
+        <p>Por favor, ingresa la contraseña para acceder al mensaje especial.</p>
+        <input type="password" id="password" placeholder="DD/MM/AAAA">
+        <button onclick="login()">Iniciar Sesión</button>
+    </div>
+    <div class="message">
+        <h1>Feliz Primer Mes, Amor!</h1>
+        <div class="heart">💖</div>
+        <p>Hoy celebramos nuestro primer mes juntos, y no podría estar más emocionado de todo lo que hemos compartido hasta ahora. Cada momento contigo ha sido increíble. Me has mostrado lo que significa amar y ser amado de una manera que nunca antes había experimentado.</p>
+        <p>Recuerdo cada momento que hemos pasado juntos asi sea por llamada, desde nuestras primeras conversaciones que fue en el free fire xd. Cada risa, cada noche que haciamos llamada y que te hacia compañia mientras tu hacias tus tareas cada muestra de cariño ha fortalecido el vínculo que compartimos. Me siento tan afortunado de tenerte en mi vida, y no puedo esperar a ver lo que el futuro nos depara.</p>
+        <p>Gracias por ser quien eres, por tu paciencia, y por hacerme sentir tan especial todos los días. Este es solo el comienzo de algo realmente maravilloso, y estoy ansioso por continuar este viaje contigo.</p>
+        <p>¡Por muchos más meses y recuerdos juntos! 🥂</p>
+        <p>Te amo con todo mi corazón, y siempre lo haré.</p>
+    </div>
+
+    <!-- Reproductor de audio oculto -->
+    <audio id="background-music" src="Karol G - Ocean (Letra).mp3" loop></audio>
+
+</body>
+</html>
